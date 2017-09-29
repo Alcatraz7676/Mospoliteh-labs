@@ -1,5 +1,10 @@
+
 <resources>
     <string name="app_name">Laba-1</string>
-    <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="first_task_format">M = %1$f</string>
+    <string name="second_task_format">L = %1$f</string>
+    <string name="third_task_format">K = %1$f</string>
+    <string name="fifth_task_format">Сумма выплаты по депозиту равна %1$.3f грн</string>
+    <string name="sixth_task_format">Данная точка лежит в %1$d четности</string>
 </resources>
