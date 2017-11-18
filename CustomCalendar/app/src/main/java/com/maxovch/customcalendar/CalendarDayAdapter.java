@@ -33,7 +33,7 @@ public class CalendarDayAdapter extends ArrayAdapter<Date> {
         // day in question
         Date date = getItem(position);
         int day = date.getDate();
-        int month = date.getMonth();
+        final int month = date.getMonth();
         int year = date.getYear();
 
         // date for this month
