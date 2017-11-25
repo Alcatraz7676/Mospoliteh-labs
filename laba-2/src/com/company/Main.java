@@ -2,6 +2,7 @@ package com.company;
 
 import com.company.task3.OddNumber;
 import com.company.task6.Stack;
+import com.company.task7.Queue;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -75,6 +76,32 @@ public class Main {
         System.out.println("Call peek method on stack: " + stack.peek());
         System.out.println("Call pop method on stack: " + stack.pop());
         System.out.println("And peek again: " + stack.peek());
+
+        // 7 Реализовать структуру данных Очередь на базе массива в виде класса.
+        // Ниже приведен пример использования класса Queue (сама коллекция лежит в папке task7).
+        System.out.println("\n • Seventh task");
+        Queue<Integer> queue = new Queue<Integer>(5);
+        if(stack.isEmpty())
+            System.out.println("Queue is empty");
+        queue.insert(11);
+        queue.insert(1337);
+        queue.insert(-777);
+        if (!queue.isEmpty()) {
+            System.out.println("Queue is not empty");
+            System.out.print("Queue: {");
+            for (Integer element : queue) {
+                if (element != null)
+                    System.out.print(element + ", ");
+            }
+            System.out.println("]");
+        }
+        System.out.println("Call peek method on stack: " + queue.peekFront());
+        System.out.println("Call pop method on stack: " + queue.remove());
+        System.out.println("Call pop method on stack: " + queue.remove());
+        System.out.println("Call pop method on stack: " + queue.remove());
+        System.out.println("Call pop method on stack: " + queue.remove());
+        if (queue.isEmpty())
+            System.out.println("Queue is empty");
     }
 
     private static ArrayList<Integer> task1(ArrayList<Integer> array) {

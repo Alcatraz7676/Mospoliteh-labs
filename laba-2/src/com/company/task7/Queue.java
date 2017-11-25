@@ -1,35 +1,51 @@
-package com.company.task6;
+package com.company.task7;
 
 import java.util.Iterator;
 
-public class Stack<E> implements Iterable<E> {
+public class Queue<E> implements Iterable<E> {
     private int maxSize;
     private Object[] array;
-    private int top;
+    private int front;
+    private int end;
+    private int size;
 
-    public Stack(int size) {
-        maxSize = size;
+    public Queue(int maxSize) {
+        this.maxSize = maxSize;
         array = new Object[maxSize];
-        // -1 значит отсутсвие элементов
-        top = -1;
+        front = 0;
+        end = -1;
+        size = 0;
     }
 
-    public void push(E element) {
-        array[++top] = element;
+    public void insert(E item) {
+        if (end == maxSize-1)
+            end = -1;
+        array[++end] = item;
+        size++;
     }
 
     @SuppressWarnings("unchecked")
-    public E pop() {
-        return (E) array[top--];
+    public E remove() {
+        E temp = (E) array[front++];
+        if (getSize() != 0) {
+            if (front == maxSize)
+                front = 0;
+            size--;
+        }
+        return temp;
     }
 
     @SuppressWarnings("unchecked")
-    public E peek() {
-        return (E) array[top];
+    public E peekFront() {
+        return (E) array[front];
     }
 
     public boolean isEmpty() {
-        return top == -1;
+        return size == 0;
+    }
+
+    public int getSize() {
+        return size;
     }
 
     @Override
