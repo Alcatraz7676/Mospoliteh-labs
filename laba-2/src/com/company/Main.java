@@ -3,6 +3,9 @@ package com.company;
 import com.company.task3.OddNumber;
 import com.company.task6.Stack;
 import com.company.task7.Queue;
+import com.company.task8.Set;
+import com.company.task8.SetUtils;
+import com.company.task9.Worker;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -102,6 +105,36 @@ public class Main {
         System.out.println("Call pop method on stack: " + queue.remove());
         if (queue.isEmpty())
             System.out.println("Queue is empty");
+
+        // 8. Определить класс Set на основе множества целых чисел, n = размер. Создать методы для определения
+        // пересечения и объединения множеств.
+        System.out.println("\n • Eighth task");
+        Set set1 = new Set(new ArrayList<Integer>(Arrays.asList(6, 9, 1, 2, 4, 9)));
+        System.out.print("Set1: ");
+        set1.print();
+        Set set2 = new Set(5);
+        set2.add(6);
+        set2.add(6);
+        set2.add(5);
+        set2.add(4);
+        set2.add(9);
+        set2.add(3);
+        System.out.print("Set2: ");
+        set2.print();
+        System.out.print("Set crossing: ");
+        SetUtils.setCrossing(set1, set2).print();
+        System.out.print("Set association: ");
+        SetUtils.setAssociation(set1, set2).print();
+
+        // 9. Определить класс Рабочий с полями Имя, Возраст, Пол, Должность. Создать индексатор для объектов класса.
+        // Проследить, чтобы поля напрямую в других классах были недоступны. Создать функцию вывода информации о рабочем.
+        System.out.println("\n • Ninth task");
+        Worker worker1 = new Worker("Max", 20, 'M', "Programmer");
+        System.out.println(worker1.toString());
+        Worker worker2 = new Worker("Fred", 24, 'M', "Manager");
+        System.out.println(worker2.toString());
+        Worker worker3 = new Worker("Anna", 19, 'F', "Actress");
+        System.out.println(worker3.toString());
     }
 
     private static ArrayList<Integer> task1(ArrayList<Integer> array) {
