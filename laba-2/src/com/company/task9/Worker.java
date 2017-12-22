@@ -7,6 +7,8 @@ public class Worker {
     private String post;
     private int id;
 
+    // Статическая переменная пренадлежит не экземплярам класса, а непосредственно классу, то есть при создании нового
+    // объекта не будет создаваться новая переменная nextId, а использоваться одна на все объекты этого класса.
     private static int nextId = 0;
 
     public Worker(String name, int age, Character gender, String post) {
