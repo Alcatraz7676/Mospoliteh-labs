@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_weight="20"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageview_poster"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            tools:src="@drawable/poster1_1"
+            android:scaleType="centerCrop"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_weight="80"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textview_title"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="50"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            tools:text="Ёлки новые"/>
+
+        <TextView
+            android:id="@+id/textview_genre"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="50"
+            android:paddingLeft="10dp"
+            android:gravity="top"
+            tools:text="комедия"/>
+
+    </LinearLayout>
+
+</LinearLayout>
