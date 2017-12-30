@@ -14,7 +14,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageview_poster_desc"
+            android:id="@+id/imageview_poster"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="40"
@@ -29,7 +29,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textview_title_desc"
+                android:id="@+id/textview_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Name"
@@ -37,19 +37,19 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/textview_genre_desc"
+                android:id="@+id/textview_country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Genre"
+                android:text="Country"
                 android:textSize="20sp"/>
 
             <TextView
-                android:id="@+id/textview_year_desc"
+                android:id="@+id/textview_rating"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Year"
+                android:text="Rating"
                 android:textSize="20sp"/>
 
         </LinearLayout>
